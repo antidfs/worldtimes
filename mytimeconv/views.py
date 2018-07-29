@@ -16,7 +16,7 @@ def makeDateStr(tz_dict = {}, date_dict = {}):  #入力したタイムゾーン�
         tz_name, tz_str = tz_dict.popitem()
         try:
             date = datetime.now(timezone(tz_str))
-            date_str = "{0:%Y-%m-%d %H:%M:%S}".format(date)
+            date_str = "{0:!%Y-%m-%d!%H:%M:%S}".format(date)
 
             date_dict[tz_name] = date_str;
         except:
